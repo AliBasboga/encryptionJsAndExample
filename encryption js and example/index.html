@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metin Şifreleyici/Çözücü</title>
+    <style>
+           /* Temel stil ayarları */
+           body {
+            font-family: Arial, sans-serif; /* Yazı tipi ayarı */
+            background-color: #f4f4f9; /* Arka plan rengi */
+            padding: 20px; /* Kenar boşluğu */
+            max-width: 600px; /* Maksimum genişlik */
+            margin: 0 auto; /* Ortalanmış yerleşim */
+        }
+        h1 {
+            text-align: center; /* Başlığı ortala */
+            color: #333; /* Başlık rengi */
+        }
+        .container {
+            background-color: #fff; /* İçerik kutusu arka plan rengi */
+            padding: 20px; /* İçerik kutusu kenar boşluğu */
+            border-radius: 8px; /* Köşe yuvarlama */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Kutu gölgesi */
+        }
+        textarea {
+            width: 100%; /* Genişlik ayarı */
+            height: 100px; /* Yükseklik ayarı */
+            padding: 10px; /* İç kenar boşluğu */
+            border-radius: 4px; /* Köşe yuvarlama */
+            border: 1px solid #ccc; /* Kenarlık */
+            resize: none; /* Yeniden boyutlandırmayı kapat */
+        }
+        input[type="number"] {
+            width: 50px; /* Genişlik ayarı */
+            padding: 5px; /* İç kenar boşluğu */
+            margin: 10px 0; /* Üst ve alt kenar boşluğu */
+        }
+        button {
+            padding: 10px 20px; /* İç kenar boşluğu */
+            background-color: #007bff; /* Arka plan rengi */
+            color: #fff; /* Yazı rengi */
+            border: none; /* Kenarlık yok */
+            border-radius: 4px; /* Köşe yuvarlama */
+            cursor: pointer; /* İşaretçi şekli */
+        }
+        button:hover {
+            background-color: #0056b3; /* Fare üzerine geldiğinde arka plan rengi */
+        }
+    </style>
+</head>
+<body>
+    <h1>Metin Şifreleyici/Çözücü</h1>
+    <div class="container">
+        <label for="textInput">Metin:</label>
+        <textarea id="textInput" placeholder="Metni buraya girin..."></textarea>
+
+        <label for="shiftInput">Kaydırma Değeri:</label>
+        <input type="number" id="shiftInput" value="3">
+
+        <button onclick="encryptText()">Şifrele</button>
+        <button onclick="decryptText()">Çöz</button>
+
+        <h2>Sonuç:</h2>
+        <textarea id="resultOutput" readonly></textarea>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
